@@ -20,6 +20,7 @@
 	{% if site.logo %}
 		<a href="{{ "/" | absolute_url }}"><img src="{{site.logo | relative_url}}" alt="Logo" /></a>
 	{% endif %}
+      {% include_relative {{ site.menu_links }} %}
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
     </header>
 

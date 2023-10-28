@@ -1,5 +1,6 @@
 title: Cayman theme
 logo: /assets/img/logo.png
+menu_links: MenuLinks.html
 description: Cayman is a clean, responsive theme for GitHub Pages.
 show_downloads: true
 google_analytics:
