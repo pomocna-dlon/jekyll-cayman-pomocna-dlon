@@ -2,3 +2,19 @@
 ---
 
 @import 'jekyll-theme-cayman';
+
+.page-header {
+  background-image: linear-gradient(0deg, rgba(0,51,26,1) 0%, rgba(0,104,53,1) 70%, rgba(0,51,26,1) 100%);
+
+  @include large {
+    padding: 1rem 2rem;
+  }
+
+  @include medium {
+    padding: 1rem 2rem;
+  }
+
+  @include small {
+    padding: 1rem 1rem;
+  }
+}
