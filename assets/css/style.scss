@@ -17,14 +17,17 @@
 .main-content {
   @include large {
     padding: 0.5rem 2rem;
+    width: 800px;
   }
 
   @include medium {
     padding: 0.5rem 1.5rem;
+    width: 720px;
   }
 
   @include small {
     padding: 0.5rem 1rem;
+    width: 540px;
   }
 }
 
