@@ -57,3 +57,21 @@
 	position:relative;
 	top:1px;
 }
+
+.centerImgs img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+	@include large {
+		width: 80%;
+	}
+
+	@include medium {
+		width: 98%;
+	}
+
+	@include small {
+		width: 98%;
+	}
+}
