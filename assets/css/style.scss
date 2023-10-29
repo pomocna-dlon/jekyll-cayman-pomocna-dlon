@@ -14,6 +14,20 @@
   font-size: 1.5rem;
 }
 
+.main-content {
+  @include large {
+    padding: 0.5rem 2rem;
+  }
+
+  @include medium {
+    padding: 0.5rem 1.5rem;
+  }
+
+  @include small {
+    padding: 0.5rem 1rem;
+  }
+}
+
 .site-footer {
 	text-align: center;
 }
