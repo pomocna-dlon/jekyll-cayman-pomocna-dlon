@@ -1,13 +1,15 @@
-document.querySelectorAll('.loadImages').forEach(function(link) {
-  link.addEventListener('click', function(event) {
-	event.preventDefault();
-	
-    var container = this.closest('.centerImgs');
-    var images = container.querySelectorAll('a img[data-src]');
+document.addEventListener("DOMContentLoaded", function() {
+	document.querySelectorAll('.loadImages').forEach(function(link) {
+		link.addEventListener('click', function(event) {
+			event.preventDefault();
 
-    images.forEach(function(image) {
-      image.setAttribute('src', image.getAttribute('data-src'));
-      image.removeAttribute('data-src');
-    });
-  });
+			var container = this.closest('.centerImgs');
+			var images = container.querySelectorAll('a img[data-src]');
+
+			images.forEach(function(image) {
+				image.setAttribute('src', image.getAttribute('data-src'));
+				image.removeAttribute('data-src');
+			});
+		});
+	});
 });
