@@ -1,5 +1,7 @@
 document.querySelectorAll('.loadImages').forEach(function(link) {
-  link.addEventListener('click', function() {
+  link.addEventListener('click', function(event) {
+	event.preventDefault();
+	
     var container = this.closest('.centerImgs');
     var images = container.querySelectorAll('a img[data-src]');
 
