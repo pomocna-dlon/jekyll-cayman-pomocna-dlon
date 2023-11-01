@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		link.addEventListener('click', function(event) {
 			event.preventDefault();
 
-			var container = this.nextAll('.centerImgs:first');
+			var container = this.closest('.archiveItem');
 			var images = container.querySelectorAll('img[data-src]');
 
 			images.forEach(function(image) {
