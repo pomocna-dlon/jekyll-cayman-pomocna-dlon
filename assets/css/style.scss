@@ -109,7 +109,6 @@
 .nav-button {
 	position: absolute;
 	bottom: 8px;
-	left: 50%;
 	cursor: pointer;
 	color: white;
 	font-size: 32px;
@@ -137,4 +136,5 @@
 	border-radius: 0px;
 	left: 50%;
 	transform: translateX(-100px);
+	bottom: 18px;
 }
