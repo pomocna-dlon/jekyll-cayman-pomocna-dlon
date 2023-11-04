@@ -26,7 +26,7 @@ function displayImage(index) {
 	const counter = document.getElementById('counter');
 	
 	image.src = images[index];
-	counter.textContent = index + '/' + images.length;
+	counter.textContent = (index + 1) + '/' + images.length;
 }
 
 function navigateImage(event, offset) {
