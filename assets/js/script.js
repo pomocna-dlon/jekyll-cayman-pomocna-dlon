@@ -1,13 +1,13 @@
 let images = [];
 let currentIndex = 0;
 
-function openImageBrowser(event, imagesList, index) {
+function openImageBrowser(event, index) {
 	event.preventDefault();
 	
 	const overlay = document.getElementById('overlay');
 	const image = document.getElementById('image');
 
-	images = JSON.parse(imagesList);
+	images = JSON.parse(event.target.getAttribute('data-src'));
 	currentIndex = index;
 	displayImage(currentIndex);
 
