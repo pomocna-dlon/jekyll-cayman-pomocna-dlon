@@ -97,31 +97,44 @@
 }
 
 /* Stylizacja obrazka */
-.image-container {
-	max-width: 90%;
-	max-height: 90%;
-	margin: 6px auto;
-}
-
 #image {
+	margin-left: auto;
+	margin-right: auto;
 	max-width: 100%;
 	max-height: 100%;
+	padding-bottom: 60px;
 }
 
 /* Stylizacja przycisków "Next" i "Previous" */
 .nav-button {
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	bottom: 8px;
+	left:50%:
 	cursor: pointer;
 	color: white;
-	font-size: 20px;
+	font-size: 32px;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 0px 32px;
+	border-radius: 16px;
 }
 
 .next-button {
-	right: 10px;
+	right: 8px;
 }
 
 .prev-button {
-	left: 10px;
+	left: 8px;
+}
+
+.close-button {
+	right: 50%;
+	transform: translateX(100px);
+}
+
+.nav-counter {
+	cursor: auto;
+	font-size: 20px;
+	border-radius: 0px;
+	left: 50%;
+	transform: translateX(-100px);
 }

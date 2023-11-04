@@ -36,12 +36,11 @@
       </footer>
     </main>
 	<div id="overlay">
-		<div class="close-button" onclick="closeImageBrowser()">&#215;</div>
-		<div class="nav-button prev-button" onclick="navigateImage(-1)">&#8249;</div>
-		<div class="image-container">
-			<img id="image" src="" alt="Obrazek">
-		</div>
-		<div class="nav-button next-button" onclick="navigateImage(1)">&#8250;</div>
+		<img id="image" src="" alt="Obrazek">
+		<div class="nav-button prev-button" onclick="navigateImage(event, -1)">&#8249;</div>
+		<div class="nav-button next-button" onclick="navigateImage(event, 1)">&#8250;</div>
+		<div class="nav-button close-button" onclick="closeImageBrowser(event)">&#215;</div>
+		<div id="counter" class="nav-button nav-counter">0/0</div>
 	</div>
   </body>
 </html>
