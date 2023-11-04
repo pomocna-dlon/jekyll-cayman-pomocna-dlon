@@ -96,6 +96,11 @@
 	text-align: center;
 }
 
+// prevent scrolling when overlay is active
+body.overlay-active {
+	overflow: hidden;
+}
+
 /* Stylizacja obrazka */
 #gallery-image {
 	margin-left: auto;

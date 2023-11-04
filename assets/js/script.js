@@ -11,6 +11,7 @@ function openImageBrowser(event, index) {
 	displayImage(currentIndex);
 
 	overlay.style.display = 'block';
+	document.body.classList.add('overlay-active');
 }
 
 function closeImageBrowser(event) {
@@ -19,6 +20,7 @@ function closeImageBrowser(event) {
 	const overlay = document.getElementById('gallery-overlay');
 	
 	overlay.style.display = 'none';
+	document.body.classList.remove('overlay-active');
 }
 
 function displayImage(index) {
