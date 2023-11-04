@@ -31,8 +31,15 @@ function displayImage(index) {
 	const image = document.getElementById('gallery-image');
 	const counter = document.getElementById('gallery-counter');
 	
-	image.src = images[index];
-	counter.textContent = (index + 1) + '/' + images.length;
+	image.src = images[index][0];
+	
+	counterText = (index + 1) + '/' + images.length;
+	
+	if (images[index][1].length > 0) {
+		counterText += " | " images[index][1];
+	}
+	
+	counter.textContent = counterText;
 }
 
 function navigateImage(event, offset) {
