@@ -35,5 +35,13 @@
         <span class="site-footer-credits"><a href="https://www.flaticon.com/free-icons/heart">Heart icons created by Freepik - Flaticon</a>.</span>
       </footer>
     </main>
+	<div id="overlay">
+		<div class="close-button" onclick="closeImageBrowser()">&#215;</div>
+		<div class="nav-button prev-button" onclick="navigateImage(-1)">&#8249;</div>
+		<div class="image-container">
+			<img id="image" src="" alt="Obrazek">
+		</div>
+		<div class="nav-button next-button" onclick="navigateImage(1)">&#8250;</div>
+	</div>
   </body>
 </html>

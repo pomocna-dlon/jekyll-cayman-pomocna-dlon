@@ -1,21 +1,38 @@
-document.addEventListener("DOMContentLoaded", function() {
-	document.querySelectorAll('.loadImages').forEach(function(link) {
-		link.addEventListener('click', function(event) {
-			event.preventDefault();
+let images = [];
+let currentIndex = 0;
 
-			var container = this.closest('.archiveItem');
-			var images = container.querySelectorAll('img[data-src]');
-			var hiddenImagesContainer = container.querySelector('.centerImgsEmpty');
-			
-			hiddenImagesContainer.classList.add('centerImgs');
-			hiddenImagesContainer.classList.remove('centerImgsEmpty');
-			
-			images.forEach(function(image) {
-				image.setAttribute('src', image.getAttribute('data-src'));
-				image.removeAttribute('data-src');
-			});
-			
-			this.remove();
-		});
-	});
-});
+function openImageBrowser(event, imagesList, index) {
+	event.preventDefault();
+	
+	const overlay = document.getElementById('overlay');
+	const image = document.getElementById('image');
+
+	images = JSON.parse(imagesList);
+	currentIndex = index;
+	displayImage(currentIndex);
+
+	overlay.style.display = 'block';
+}
+
+function closeImageBrowser(event) {
+	event.preventDefault();
+	const overlay = document.getElementById('overlay');
+	overlay.style.display = 'none';
+}
+
+function displayImage(index) {
+	const image = document.getElementById('image');
+	image.src = images[index];
+}
+
+function navigateImage(event, offset) {
+	event.preventDefault();
+	
+	currentIndex += offset;
+	if (currentIndex < 0) {
+		currentIndex = images.length - 1;
+	} else if (currentIndex >= images.length) {
+		currentIndex = 0;
+	}
+	displayImage(currentIndex);
+}
