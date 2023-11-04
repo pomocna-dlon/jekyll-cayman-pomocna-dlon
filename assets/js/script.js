@@ -36,7 +36,7 @@ function displayImage(index) {
 	counterText = (index + 1) + '/' + images.length;
 	
 	if (images[index][1].length > 0) {
-		counterText += " | " images[index][1];
+		counterText += " | " + images[index][1];
 	}
 	
 	counter.textContent = counterText;
