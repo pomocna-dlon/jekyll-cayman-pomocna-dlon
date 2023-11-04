@@ -37,9 +37,14 @@
     </main>
 	<div id="gallery-overlay" onclick="closeImageBrowser(event)">
 		<img id="gallery-image" src="" alt="Obrazek">
-		<div class="gallery-nav-button gallery-prev-button" onclick="navigateImage(event, -1)">&#8249;</div>
-		<div class="gallery-nav-button gallery-next-button" onclick="navigateImage(event, 1)">&#8250;</div>
 		<div id="gallery-counter" class="gallery-nav-button gallery-nav-counter">0/0</div>
+		<div class="gallery-nav-button gallery-prev-button">&#8249;</div>
+		<div class="gallery-nav-button gallery-next-button">&#8250;</div>
+		<div class="gallery-nav-button gallery-close-button">&#215;</div>
+		
+		<div id="gallery-prev-area" onclick="navigateImage(event, -1)"></div>
+		<div id="gallery-next-area" onclick="navigateImage(event, 1)"></div>
+		<div id="gallery-close-area" onclick="closeImageBrowser(event)"></div>
 	</div>
   </body>
 </html>

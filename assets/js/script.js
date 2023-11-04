@@ -17,9 +17,11 @@ function openImageBrowser(event, index) {
 function closeImageBrowser(event) {
 	event.preventDefault();
 	
-	const overlay = document.getElementById('gallery-overlay');
+	const close_area = document.getElementById('gallery-close-area');
 	
-	if (event.target === overlay) {
+	if (event.target === close_area) {
+		const overlay = document.getElementById('gallery-overlay');
+		
 		overlay.style.display = 'none';
 		document.body.classList.remove('overlay-active');
 	}
@@ -36,13 +38,18 @@ function displayImage(index) {
 function navigateImage(event, offset) {
 	event.preventDefault();
 	
-	currentIndex += offset;
+	const next_area = document.getElementById('gallery-next-area');
+	const prev_area = document.getElementById('gallery-prev-area');
 	
-	if (currentIndex < 0) {
-		currentIndex = images.length - 1;
-	} else if (currentIndex >= images.length) {
-		currentIndex = 0;
+	if ((event.target === next_area) || (event.target === prev_area)) {
+		currentIndex += offset;
+		
+		if (currentIndex < 0) {
+			currentIndex = images.length - 1;
+		} else if (currentIndex >= images.length) {
+			currentIndex = 0;
+		}
+		
+		displayImage(currentIndex);
 	}
-	
-	displayImage(currentIndex);
 }
