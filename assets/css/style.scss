@@ -76,7 +76,7 @@
 	margin-bottom: 12px;
 }
 
-.loadImages {
+.gallery-loadImages {
 	font-size: 1.5rem;
 	font-weight:bold;
 	display: block;
@@ -84,7 +84,7 @@
 }
 
 /* Gallery display */
-#overlay {
+#gallery-overlay {
 	display: none;
 	position: fixed;
 	top: 0;
@@ -97,7 +97,7 @@
 }
 
 /* Stylizacja obrazka */
-#image {
+#gallery-image {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 100%;
@@ -106,7 +106,7 @@
 }
 
 /* Stylizacja przycisków "Next" i "Previous" */
-.nav-button {
+.gallery-nav-button {
 	position: absolute;
 	bottom: 8px;
 	cursor: pointer;
@@ -115,22 +115,26 @@
 	background-color: rgba(0, 0, 0, 0.7);
 	padding: 0px 32px;
 	border-radius: 16px;
+	
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 }
 
-.next-button {
+.gallery-next-button {
 	right: 8px;
 }
 
-.prev-button {
+.gallery-prev-button {
 	left: 8px;
 }
 
-.close-button {
+.gallery-close-button {
 	right: 50%;
 	transform: translateX(100px);
 }
 
-.nav-counter {
+.gallery-nav-counter {
 	cursor: auto;
 	font-size: 20px;
 	border-radius: 0px;

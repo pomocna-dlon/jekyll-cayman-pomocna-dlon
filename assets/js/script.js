@@ -4,7 +4,7 @@ let currentIndex = 0;
 function openImageBrowser(event, index) {
 	event.preventDefault();
 	
-	const overlay = document.getElementById('overlay');
+	const overlay = document.getElementById('gallery-overlay');
 
 	images = JSON.parse(event.target.getAttribute('data-src'));
 	currentIndex = index;
@@ -16,14 +16,14 @@ function openImageBrowser(event, index) {
 function closeImageBrowser(event) {
 	event.preventDefault();
 	
-	const overlay = document.getElementById('overlay');
+	const overlay = document.getElementById('gallery-overlay');
 	
 	overlay.style.display = 'none';
 }
 
 function displayImage(index) {
-	const image = document.getElementById('image');
-	const counter = document.getElementById('counter');
+	const image = document.getElementById('gallery-image');
+	const counter = document.getElementById('gallery-counter');
 	
 	image.src = images[index];
 	counter.textContent = (index + 1) + '/' + images.length;
