@@ -138,17 +138,12 @@ body.overlay-active {
 	left: 8px;
 }
 
-.gallery-close-button {
-	right: 50%;
-	transform: translateX(100px);
-}
-
 .gallery-nav-counter {
 	cursor: auto;
 	font-size: 20px;
 	border-radius: 0px;
-	left: 50%;
-	transform: translateX(-100px);
 	bottom: 18px;
 	padding: 2px 2px;
+	left: 50%;
+	transform: translate(-50%, 0);
 }
