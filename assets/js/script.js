@@ -19,8 +19,10 @@ function closeImageBrowser(event) {
 	
 	const overlay = document.getElementById('gallery-overlay');
 	
-	overlay.style.display = 'none';
-	document.body.classList.remove('overlay-active');
+	if (event.target === overlay) {
+		overlay.style.display = 'none';
+		document.body.classList.remove('overlay-active');
+	}
 }
 
 function displayImage(index) {
