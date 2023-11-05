@@ -3,18 +3,28 @@
 
 @import 'jekyll-theme-cayman';
 
+html {
+	font-size: 16px;
+}
+
+@media (max-height: 300px) {	
+	html {
+		font-size: 10px;
+	}
+}
+
 .page-header {
 	--dark-color: rgba(0,51,26,1);
 	--light-color: rgba(0,104,53,1);
 	
 	background: radial-gradient(circle, var(--dark-color) 0%, var(--light-color) 160px, var(--dark-color) 240px, var(--dark-color) 270px, var(--light-color) 100%);
 	background-position: center;
-	padding: 0.2rem 0.2rem;
+	padding: 2px 2px;
 }
 
 .project-name {
-  margin-top: 0.1rem;
-  margin-bottom: 0.0rem;
+  margin-top: 2px;
+  margin-bottom: 0;
   font-size: 1.5rem;
 }
 
@@ -46,12 +56,12 @@
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:13px;
+	font-size:0.8rem;
 	font-weight:bold;
-	padding:6px 12px;
+	padding:0.2rem 0.6rem;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #5b8a3c;
-	margin-bottom: 0.2rem;
+	margin-bottom: 2px;
 }
 .menuButton:hover {
 	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
@@ -60,17 +70,6 @@
 .menuButton:active {
 	position:relative;
 	top:1px;
-}
-
-@media (max-height: 300px) {
-	.menuButton {
-		font-size:9px;
-		padding:2px 6px;
-	}
-	
-	.project-name {
-		font-size: 0.8rem;
-	}
 }
 
 .centerImgs img {
@@ -132,10 +131,10 @@ body.overlay-active {
 .gallery-nav-button {
 	position: absolute;
 	color: white;
-	font-size: 16px;
+	font-size: 1rem;
 	background-color: rgba(0, 0, 0, 0.7);
-	padding: 14px 10px;
-	border-radius: 8px;
+	padding: 0.8rem 0.6rem;
+	border-radius: 0.6rem;
 	
 	-webkit-user-select: none; /* Safari */
 	-ms-user-select: none; /* IE 10 and IE 11 */
