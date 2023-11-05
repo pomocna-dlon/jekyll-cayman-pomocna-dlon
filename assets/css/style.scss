@@ -62,6 +62,17 @@
 	top:1px;
 }
 
+@media (max-height: 50vw) {
+	.menuButton {
+		font-size:9px;
+		padding:2px 6px;
+	}
+	
+	.project-name {
+		font-size: 0.8rem;
+	}
+}
+
 .centerImgs img {
 	display: block;
 	margin-left: auto;
